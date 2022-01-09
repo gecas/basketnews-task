@@ -29,7 +29,7 @@ class CreateGamesTable extends Migration
             $table->string('away_team_name');
             $table->string('away_team_city');
             $table->string('away_team_short');
-            $table->string('away_team_records');
+            $table->string('away_team_record');
             $table->string('away_team_points');
             $table->timestamps();
         });
