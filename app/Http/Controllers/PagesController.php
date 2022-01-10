@@ -12,7 +12,7 @@ class PagesController
     {
         $count = Game::count();
         $dates = DB::table('games')->distinct()->pluck('date')->toArray();
-        $seconds = 60*60*24;
+        $seconds = 60*60*60*24;
         $games = Cache::remember('games', $seconds, function () {
             return Game::all()->groupBy('date');
         });
